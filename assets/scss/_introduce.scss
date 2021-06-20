@@ -1,0 +1,65 @@
+.introduce {
+    overflow: hidden;
+    padding-bottom: ps(54);
+    &__wrapper {
+        z-index: 1;
+        position: relative;
+        &::before {
+            content: url('../img/introduce_preview.png');
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            @media screen and (max-width: $laptop) {
+                right: -225px;
+            }
+            @media screen and (max-width: $small_tablet) {
+                transform: scale(0.9);
+            }
+            @media screen and (max-width: $small_tablet) {
+                transform: scale(0.9);
+            }
+            @media screen and (max-width: $phone) {
+                content: url('../img/introduce_preview_black.png');
+                top: -150px;
+                left: 50%;
+                transform: translateX(-50%) scale(1.2);
+                right: auto;
+            }
+        }
+        @media screen and (max-width: $phone) {
+            color: #fff;
+        }
+    }
+    &__1s {
+        margin-top: ps(83);
+        font-size: ps(30);
+        @media screen and (max-width: $small_tablet) {
+            font-size: ps(24);
+            margin-top: ps(72);
+        }
+    }
+    &__2s {
+        margin-top: ps(30);
+        @media screen and (max-width: $laptop) {
+            font-size: ps(60);
+        }
+        @media screen and (max-width: $small_tablet) {
+            font-size: ps(40);
+        }
+    }
+    &__3s {
+        margin-top: ps(10);
+        @media screen and (max-width: $tablet) {
+            font-size: ps(30);
+        }
+    }
+    &__4s {
+        margin-top: ps(30);
+    }
+    &__5s {
+        margin-top: ps(15);
+    }
+    &__btn {
+        margin-top: ps(30);
+    }
+}

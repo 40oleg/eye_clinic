@@ -1,0 +1,99 @@
+.advantages {
+        background: #fcf9ff;
+        padding-bottom: 40px;
+		&__caption {
+            font-weight: bold;
+		}
+
+        &__cell {
+            display: flex;
+            margin-top: 30px;
+            &:first-child {
+                margin-top: 50px;
+            }
+            &:nth-child(2n) {
+                margin-left: 50px;
+                .advantages__block {
+                    margin: 0 15px;
+                    @media screen and (max-width: $laptop) {
+                        margin: 0 7.5px;
+                    }
+                }
+            }
+            &:nth-child(2n+1) {
+                margin-left: -50px;
+                .advantages__block {
+                    margin: 0 25px;
+                    @media screen and (max-width: $laptop) {
+                        margin: 0 7.5px;
+                    }
+                }
+            }
+            @media screen and (max-width: $laptop) {
+                margin-left: 0 !important;
+                margin-right: 0;
+            }
+            @media screen and (max-width: $tablet) {
+                flex-direction: column;
+                margin-top: 0;
+            }
+        }
+
+		&__blocks {
+            display: flex;
+            flex-direction: column;
+		}
+
+		&__block {
+            display: flex;
+            padding: 25px 20px;
+            width: 560px;
+            box-sizing: border-box;
+            background: #fff;
+            box-shadow: 0 0 30px #b3a2c0;
+            @media screen and (max-width: $tablet) {
+                margin-top: 30px !important;
+            } 
+            @media screen and (max-width: $phone) {
+                width: 90vw;
+                margin-left: auto;
+                margin-right: auto;
+            } 
+ 		}
+
+		&__number {
+            color: #DDD1E7;
+            font-family: Cormorant-Italic;
+            width: 116px;
+            font-size: 140px;
+            line-height: 100px;
+            @media screen and (max-width: $small_tablet) {
+                font-size: 100px;
+            } 
+            @media screen and (max-width: $phone) {
+                font-size: 70px;
+            } 
+		}
+
+		&__info {
+            position: relative;
+            margin-left: 30px;
+            width: 402px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -15px;
+                width: 1px;
+                height: 100%;
+                background: #DDD1E7;
+            }
+		}
+
+		&__text {
+            font-size: 15px;
+		}
+}

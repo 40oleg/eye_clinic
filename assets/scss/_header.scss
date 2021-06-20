@@ -1,0 +1,111 @@
+.header {
+    font-family: MPLUS1p-Medium;
+    background-color: #fff;
+    font-size: 13px;
+    box-shadow: -55px 0 55px rgb(212, 212, 212);
+    &__wrapper {
+        display: flex;
+        justify-content: stretch;
+        margin: 0 auto;
+        @media screen and (max-width: $laptop) {
+            width: 85vw;
+        }
+        @media screen and (max-width: $small_tablet) {
+            width: 100vw;
+        }
+    }
+    &__item {
+        cursor: pointer;
+        white-space: nowrap;
+        &_special {
+            color: #764F96;
+            border-bottom: 2px dashed #764F96;
+            height: 17px;
+        }
+        &:not(.header__logo) {
+            @media screen and (max-width: $tablet) {
+                padding: 5px 15px;
+            }
+        }
+        &:not(.header__logo) {
+            @media screen and (max-width: $small_tablet) {
+                padding: 5px 10px;
+            }
+        }
+        &:not(.header__logo) {
+            @media screen and (max-width: $phone) {
+                padding: 5px 5px;
+            }
+        }
+        &:not(.header__logo, .header__item_special) {
+            @media screen and (max-width: $small_phone) {
+                display: none;
+            }
+        }
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 50%;
+        @media screen and (max-width: $tablet) {
+            padding: 7px 0;
+        }
+        @media screen and (max-width: $phone) {
+            width: auto;
+        }
+    }
+    &__up-item {
+        font-size: 10px;
+        color: #999999;
+    }
+    &__down-item {
+        
+    }
+    &__icons {
+        display: flex;
+    }
+    &__icon {
+        margin-right: 15px;
+    }
+    &__logo {
+        height: 59px;
+        margin: 0 25px;
+        & img {
+            @media screen and (max-width: $tablet) {
+                transform: scale(1.25);
+                margin-top: 15px;
+            }
+            @media screen and (max-width: $small_tablet) {
+                transform: scale(1.20);
+                margin-top: 5px;
+            }
+            @media screen and (max-width: $phone) {
+                transform: scale(1);
+                margin-top: 0;
+            }
+            @media screen and (max-width: $small_phone) {
+                transform: scale(0.8);
+                margin-top: -15px;
+            }
+        }
+        @media screen and (max-width: $small_phone) {
+            margin: 0;
+        }
+    }
+    &__menu {
+        & .header__item {
+            @media screen and (max-width: $phone) {
+                display: none;
+            }
+        }
+    }
+    &__menu-icon {
+        padding: 10px;
+        display: none;
+        @media screen and (max-width: $phone) {
+            display: block;
+        }
+    }
+}
